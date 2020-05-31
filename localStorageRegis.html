@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    
+    
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+	<title>Registration Form </title>
+</head>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<body>
+	
+	<style>
+		input[type=text] ,input[type=password]{
+	width:100%;
+	padding:10px;
+	border :2px solid black;
+	border-radius:10px;
+	box-sizing: border-box;
+	margin-top:6px;
+	margin-bottom: 6px;
+	resize:vertical;
+} 
+
+body{
+	font-family: Lucida Bright;
+	
+	border :5px solid gray; 
+
+	max-width: 700px;
+	margin:100px auto;
+	padding: 40px 40px 40px 40px;
+	font-size:20px;
+}
+h1{
+	text-align:center;
+}
+
+
+
+	</style>
+
+
+<body>
+	<form name=person> 
+	<h1>Registration Here</h1>
+	<label >User Name</label>
+	
+	<input id="username"type="text" required><br>
+<label >Password</label><br>
+<input id="p" type="password" required><br>
+<label>Confirm Password</label>
+<input id="cp" type="password" required><br>
+<button type="submit" id="button" class="btn btn-primary" value="get Account" onClick="store()">Registration</button><br>
+<a href="http://localhost:3000/login">click for Login page </a><br>
+<a href="localStorage3.html">click for check all Registrations </a>
+	
+	</form>
+
+
+<script>
+	var tag=document.getElementById("button");
+    tag.addEventListener("click", function(){
+	var input1 = document.getElementById("p").value;
+	var input2 = document.getElementById("cp").value;
+	
+	//if(input1.value.match(input2.value)){
+		//if(input1.value == input2.value){
+			if(input1!=input2){
+		alert("Password did not match: Please try again...");
+				return false;
+			}
+			else{
+				
+		
+		alert('registration sucessfully');
+		
+	}
+
+	});
+</script>
+<!--<script type="text/javascript" src="localStorage.js"></script>-->
+
+
+
+
+
+
+</body>
+</html>

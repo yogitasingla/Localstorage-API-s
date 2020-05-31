@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>localStorage</title>
+</head>
+<body>
+	<ul id="ul1"></ul>
+	<ul id="ul2"></ul>
+<script type="text/javascript">
+	const ul = document.querySelector('ul')
+	const liMaker = text => {
+  const li = document.createElement('li')
+  li.textContent = text
+  ul.appendChild(li)
+}
+	console.log("=====",localStorage.getItem('person1'));
+var localData=JSON.parse(localStorage.getItem('person1'));
+localData.forEach(person1=>{
+	liMaker(person1.username)
+	liMaker(person1.password)
+})
+/*
+console.log("=====",localStorage.getItem('person1'));
+var localData=JSON.parse(localStorage.getItem('person1'));
+console.log(localData);
+localData.forEach(function(x)
+	{
+		print(x.username,x.password);
+
+	}
+	);
+function print(x,y){
+	var list=document.createElement("li")
+	document.getElementById("ul1").innerHTML=x;
+	document.getElementById("ul2").innerHTML=y;
+
+
+}
+*/
+</script>
+
+
+
+
+<script type="text/javascript" src="localStorage.js"></script>
+
+
+
+</body>
+</html>
